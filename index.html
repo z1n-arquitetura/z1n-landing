@@ -23,7 +23,7 @@ body{
   scroll-snap-type:x mandatory;
 }
 
-/* DESKTOP AJUSTADO */
+/* DESKTOP */
 @media (min-width: 768px){
   .container{
     width:420px;
@@ -39,9 +39,12 @@ body{
   height:100vh;
   scroll-snap-align:start;
   position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-/* IMAGEM */
+/* IMAGENS */
 .slide img{
   width:100%;
   height:100%;
@@ -49,24 +52,34 @@ body{
   background:#000;
 }
 
-/* CTA DISCRETO */
-.cta{
-  position:absolute;
-  bottom:20px;
-  left:50%;
-  transform:translateX(-50%);
+/* TELAS DE TEXTO */
+.content{
+  color:#fff;
+  text-align:center;
+  padding:30px;
 }
 
+.content h1{
+  font-size:24px;
+  margin-bottom:15px;
+}
+
+.content p{
+  font-size:16px;
+  margin-bottom:20px;
+}
+
+/* BOTÃO */
 .btn{
-  padding:10px 16px;
-  background:rgba(0,0,0,0.6);
+  padding:12px 20px;
+  background:#25D366;
   color:#fff;
   text-decoration:none;
-  border-radius:4px;
-  font-size:14px;
+  border-radius:5px;
+  display:inline-block;
 }
 
-/* WHATSAPP FIXO */
+/* WHATS FIXO */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -84,41 +97,47 @@ body{
 
 <body>
 
-<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/5516991128533" target="_blank">💬</a>
 
 <div class="container">
 
+  <!-- ABERTURA -->
   <div class="slide">
-    <img src="p1.png">
-    <div class="cta">
-      <a class="btn" href="https://wa.me/5516991128533">Orçamento</a>
+    <div class="content">
+      <h1>Projeto e Regularização sem dor de cabeça</h1>
+      <p>Atendimento em Ribeirão Preto e região</p>
+      <p>→ Arraste para ver os projetos</p>
+      <a class="btn" href="https://wa.me/5516991128533">Solicitar orçamento</a>
     </div>
   </div>
 
+  <!-- SERVIÇOS -->
   <div class="slide">
-    <img src="p2.png">
-    <div class="cta">
-      <a class="btn" href="https://wa.me/5516991128533">Contato</a>
+    <div class="content">
+      <h1>Como posso te ajudar</h1>
+      <p>✔ Projeto para construir do zero</p>
+      <p>✔ Regularização de imóvel</p>
+      <p>✔ Aprovação na prefeitura</p>
+      <a class="btn" href="https://wa.me/5516991128533">Falar agora</a>
     </div>
   </div>
 
-  <div class="slide">
-    <img src="p3.png">
-    <div class="cta">
-      <a class="btn" href="https://wa.me/5516991128533">Falar</a>
-    </div>
-  </div>
-
+  <!-- PROJETOS LIMPOS -->
+  <div class="slide"><img src="p1.png"></div>
+  <div class="slide"><img src="p2.png"></div>
+  <div class="slide"><img src="p3.png"></div>
   <div class="slide"><img src="p4.png"></div>
   <div class="slide"><img src="p5.png"></div>
   <div class="slide"><img src="p6.png"></div>
   <div class="slide"><img src="p7.png"></div>
+  <div class="slide"><img src="p8.png"></div>
 
+  <!-- FECHAMENTO -->
   <div class="slide">
-    <img src="p8.png">
-    <div class="cta">
-      <a class="btn" href="https://wa.me/5516991128533">WhatsApp</a>
+    <div class="content">
+      <h1>Vamos tirar seu projeto do papel?</h1>
+      <p>Fale direto comigo no WhatsApp</p>
+      <a class="btn" href="https://wa.me/5516991128533">Começar agora</a>
     </div>
   </div>
 
