@@ -8,64 +8,65 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
+
 body{
   font-family:Arial, sans-serif;
+  background:#111;
   overflow:hidden;
 }
 
+/* CONTAINER */
 .container{
   display:flex;
-  width:100vw;
   height:100vh;
   overflow-x:auto;
   scroll-snap-type:x mandatory;
 }
 
+/* DESKTOP AJUSTADO */
+@media (min-width: 768px){
+  .container{
+    width:420px;
+    margin:auto;
+    border-radius:10px;
+    overflow:hidden;
+  }
+}
+
+/* SLIDE */
 .slide{
-  min-width:100vw;
+  min-width:100%;
   height:100vh;
   scroll-snap-align:start;
   position:relative;
 }
 
+/* IMAGEM */
 .slide img{
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit:contain;
+  background:#000;
 }
 
-/* TEXTO */
-.overlay{
+/* CTA DISCRETO */
+.cta{
   position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  background:rgba(0,0,0,0.4);
-  color:#fff;
-  text-align:center;
-  padding:20px;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
 }
 
-h1{font-size:28px;margin-bottom:10px;}
-p{font-size:16px;max-width:300px;}
-
-/* BOTÃO */
 .btn{
-  margin-top:20px;
-  padding:12px 20px;
-  background:#25D366;
+  padding:10px 16px;
+  background:rgba(0,0,0,0.6);
   color:#fff;
   text-decoration:none;
-  border-radius:5px;
-  font-weight:bold;
+  border-radius:4px;
+  font-size:14px;
 }
 
-/* WHATS FIXO */
+/* WHATSAPP FIXO */
 .whatsapp{
   position:fixed;
   bottom:20px;
@@ -78,77 +79,46 @@ p{font-size:16px;max-width:300px;}
   text-decoration:none;
   z-index:999;
 }
-
-/* SERVIÇOS */
-.servicos{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  height:100%;
-  background:#111;
-  color:#fff;
-  text-align:center;
-  padding:20px;
-}
-
-.servicos h2{margin-bottom:20px;}
-.servicos ul{list-style:none;}
-.servicos li{margin:10px 0;font-size:18px;}
 </style>
 </head>
 
 <body>
 
-<!-- WHATSAPP FIXO -->
+<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/5516991128533" target="_blank">💬</a>
 
 <div class="container">
 
-  <!-- SLIDE 1 -->
   <div class="slide">
     <img src="p1.png">
-    <div class="overlay">
-      <h1>Projeto, Regularização e Aprovação</h1>
-      <p>Ribeirão Preto e região</p>
-      <p>→ Deslize para o lado</p>
-      <a class="btn" href="https://wa.me/5516991128533" target="_blank">
-        Solicitar orçamento
-      </a>
+    <div class="cta">
+      <a class="btn" href="https://wa.me/5516991128533">Orçamento</a>
     </div>
   </div>
 
-  <!-- SLIDE 2 -->
   <div class="slide">
-    <div class="servicos">
-      <h2>Como posso te ajudar</h2>
-      <ul>
-        <li>✔ Projeto arquitetônico completo</li>
-        <li>✔ Regularização de imóvel</li>
-        <li>✔ Aprovação na prefeitura</li>
-      </ul>
-      <a class="btn" href="https://wa.me/5516991128533" target="_blank">
-        Falar agora
-      </a>
+    <img src="p2.png">
+    <div class="cta">
+      <a class="btn" href="https://wa.me/5516991128533">Contato</a>
     </div>
   </div>
 
-  <!-- SLIDES DE PROJETO -->
-  <div class="slide"><img src="p2.png"></div>
-  <div class="slide"><img src="p3.png"></div>
+  <div class="slide">
+    <img src="p3.png">
+    <div class="cta">
+      <a class="btn" href="https://wa.me/5516991128533">Falar</a>
+    </div>
+  </div>
+
   <div class="slide"><img src="p4.png"></div>
   <div class="slide"><img src="p5.png"></div>
   <div class="slide"><img src="p6.png"></div>
   <div class="slide"><img src="p7.png"></div>
 
-  <!-- SLIDE FINAL -->
   <div class="slide">
     <img src="p8.png">
-    <div class="overlay">
-      <h1>Fale agora e comece seu projeto</h1>
-      <a class="btn" href="https://wa.me/5516991128533" target="_blank">
-        WhatsApp direto
-      </a>
+    <div class="cta">
+      <a class="btn" href="https://wa.me/5516991128533">WhatsApp</a>
     </div>
   </div>
 
