@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Z1N Arquiteturas</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Arial, sans-serif;
+  overflow:hidden;
+}
+
+.container{
+  display:flex;
+  width:100vw;
+  height:100vh;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+}
+
+.slide{
+  min-width:100vw;
+  height:100vh;
+  scroll-snap-align:start;
+  position:relative;
+}
+
+.slide img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* TEXTO */
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,0.4);
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+h1{font-size:28px;margin-bottom:10px;}
+p{font-size:16px;max-width:300px;}
+
+/* BOTÃO */
+.btn{
+  margin-top:20px;
+  padding:12px 20px;
+  background:#25D366;
+  color:#fff;
+  text-decoration:none;
+  border-radius:5px;
+  font-weight:bold;
+}
+
+/* WHATS FIXO */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+  z-index:999;
+}
+
+/* SERVIÇOS */
+.servicos{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100%;
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+.servicos h2{margin-bottom:20px;}
+.servicos ul{list-style:none;}
+.servicos li{margin:10px 0;font-size:18px;}
+
+</style>
+</head>
+
+<body>
+
+<!-- WHATSAPP FIXO -->
+<a class="whatsapp" href="https://wa.me/SEU_NUMERO" target="_blank">💬</a>
+
+<div class="container">
+
+  <!-- SLIDE 1 - ABERTURA -->
+  <div class="slide">
+    <img src="img1.jpg">
+    <div class="overlay">
+      <h1>Projetos Arquitetônicos e Regularização</h1>
+      <p>Ribeirão Preto e região</p>
+      <p>Deslize para conhecer →</p>
+      <a class="btn" href="https://wa.me/SEU_NUMERO" target="_blank">
+        Falar com arquiteto
+      </a>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 - SERVIÇOS -->
+  <div class="slide">
+    <div class="servicos">
+      <h2>Como posso te ajudar</h2>
+      <ul>
+        <li>✔ Projetos residenciais</li>
+        <li>✔ Regularização de imóveis</li>
+        <li>✔ Aprovação na prefeitura</li>
+      </ul>
+      <a class="btn" href="https://wa.me/SEU_NUMERO" target="_blank">
+        Solicitar orçamento
+      </a>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 - PROJETO -->
+  <div class="slide">
+    <img src="img2.jpg">
+  </div>
+
+  <!-- SLIDE 4 -->
+  <div class="slide">
+    <img src="img3.jpg">
+  </div>
+
+  <!-- SLIDE 5 -->
+  <div class="slide">
+    <img src="img4.jpg">
+  </div>
+
+  <!-- SLIDE FINAL - FECHAMENTO -->
+  <div class="slide">
+    <div class="overlay">
+      <h1>Vamos tirar seu projeto do papel?</h1>
+      <a class="btn" href="https://wa.me/SEU_NUMERO" target="_blank">
+        Falar agora no WhatsApp
+      </a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
