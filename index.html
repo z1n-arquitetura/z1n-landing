@@ -12,21 +12,6 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://z1n-arq.com.br/">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Z1N Arquiteturas | José Luís Navarro">
-<meta property="og:description" content="Projetos funcionais, eficientes e personalizados">
-<meta property="og:image" content="https://z1n-arq.com.br/og-image.jpg?v=2">
-<meta property="og:url" content="https://z1n-arq.com.br/">
-<meta property="og:type" content="website">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Z1N Arquiteturas | José Luís Navarro">
-<meta name="twitter:description" content="Projetos funcionais, eficientes e personalizados.">
-<meta name="twitter:image" content="https://z1n-arq.com.br/og-image.jpg?v=2">
-
-<link rel="icon" href="favicon.png">
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <style>
@@ -39,23 +24,11 @@ body, html {
     font-family: sans-serif;
 }
 
-/* SEO invisível */
-h1 {
-    position: absolute;
-    left: -9999px;
-}
+h1 { position: absolute; left: -9999px; }
 
-/* MOBILE */
-.swiper {
-    width: 100%;
-    height: 100dvh;
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* swiper */
+.swiper { width: 100%; height: 100dvh; }
+.swiper-slide { display: flex; justify-content: center; align-items: center; }
 
 .canvas {
     position: relative;
@@ -69,7 +42,7 @@ h1 {
     object-fit: cover;
 }
 
-/* DESKTOP */
+/* desktop */
 @media (min-width: 768px) {
     .canvas {
         width: auto;
@@ -84,7 +57,7 @@ h1 {
     height: 100%;
 }
 
-/* links */
+/* hotspots */
 .link-final {
     position: absolute;
     z-index: 10;
@@ -104,44 +77,36 @@ h1 {
 #prev { left: 5px; }
 #next { right: 5px; }
 
-/* ✅ WHATSAPP FIXO (ADICIONADO) */
+/* WHATSAPP FIXO */
 .whats-fixo{
   position: fixed;
   bottom: 20px;
-  left: 15px;            /* ← muda para esquerda */
-  width: 35px;           /* ← menor */
-  height: 35px;          /* ← menor */
+  width: 42px;
+  height: 42px;
   background: #25D366;
   color: #fff;
-  border-radius: 40%;
+  border-radius: 50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:18px;        /* ← proporcional ao novo tamanho */
+  font-size:18px;
   text-decoration:none;
   z-index: 2000;
-  opacity: 0.70;         /* ← mais discreto */
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.whats-fixo.show{
+  opacity: 0.85;
+}
+
+.whats-left  { left: 15px; right: auto; }
+.whats-right { right: 15px; left: auto; }
+.whats-center{
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>
-
-<!-- DADOS ESTRUTURADOS (SEO FORTE) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Architect",
-  "name": "Z1N Arquitetura",
-  "image": "https://z1n-arq.com.br/og-image.jpg",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Ribeirão Preto",
-    "addressRegion": "SP",
-    "addressCountry": "BR"
-  },
-  "telephone": "+55 16 99112-8533",
-  "url": "https://z1n-arq.com.br/"
-}
-</script>
-
 </head>
 
 <body>
@@ -151,9 +116,10 @@ h1 {
 <div class="swiper">
 <div class="swiper-wrapper">
 
+<!-- SLIDE 1 -->
 <div class="swiper-slide">
 <div class="canvas">
-<img src="p1.png" alt="Z1N Arquiteturas - contato e apresentação">
+<img src="p1.png">
 
 <a href="tel:+5516991128533" class="link-final"
 style="width:50%; height:6%; top:65%; left:30%;"></a>
@@ -163,39 +129,44 @@ style="width:18%; height:11%; top:64%; left:6%;"></a>
 </div>
 </div>
 
+<!-- SLIDE 2 -->
 <div class="swiper-slide">
 <div class="canvas">
-<img src="p2.png" alt="Projetos funcionais, eficientes e persolnalizados.">
+<img src="p2.png">
 </div>
 </div>
 
+<!-- SLIDE 3 -->
 <div class="swiper-slide">
 <div class="canvas">
 <div class="swiper-zoom-container">
-<img src="p3.png" alt="Projeto residencial contemporâneo">
+<img src="p3.png">
 </div>
 </div>
 </div>
 
+<!-- SLIDE 4 -->
 <div class="swiper-slide">
 <div class="canvas">
 <div class="swiper-zoom-container">
-<img src="p4.png" alt="Design de interiores personalizado">
+<img src="p4.png">
 </div>
 </div>
 </div>
 
+<!-- SLIDE 5 -->
 <div class="swiper-slide">
 <div class="canvas">
 <div class="swiper-zoom-container">
-<img src="p5.png" alt="Arquitetura moderna residencial">
+<img src="p5.png">
 </div>
 </div>
 </div>
 
+<!-- SLIDE 6 -->
 <div class="swiper-slide">
 <div class="canvas">
-<img src="p6.png" alt="Contato arquiteto Ribeirão Preto">
+<img src="p6.png">
 
 <a href="tel:+5516991128533" class="link-final"
 style="width:52%; height:6%; top:80%; left:28%;"></a>
@@ -205,15 +176,17 @@ style="width:18%; height:11%; top:78%; left:6%;"></a>
 </div>
 </div>
 
+<!-- SLIDE 7 -->
 <div class="swiper-slide">
 <div class="canvas">
-<img src="p7.png" alt="Portfólio arquitetura Z1N">
+<img src="p7.png">
 </div>
 </div>
 
+<!-- SLIDE 8 -->
 <div class="swiper-slide">
 <div class="canvas">
-<img src="p8.png" alt="Solicite seu projeto arquitetônico">
+<img src="p8.png">
 
 <a href="tel:+5516991128533" class="link-final"
 style="width:55%; height:7%; top:56%; left:27%;"></a>
@@ -229,22 +202,54 @@ style="width:20%; height:12%; top:67%; left:40%;"></a>
 <div class="seta" id="prev">&#10094;</div>
 <div class="seta" id="next">&#10095;</div>
 
-<!-- ✅ WHATSAPP FIXO (ADICIONADO) -->
-<a href="https://wa.me/5516991128533?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20informações" target="_blank" class="whats-fixo">✆</a>
+<!-- BOTÃO FIXO -->
+<a href="https://wa.me/5516991128533?text=Olá,%20vim%20pelo%20site" target="_blank" class="whats-fixo">✆</a>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-new Swiper('.swiper', {
+const botao = document.querySelector('.whats-fixo');
+
+const swiper = new Swiper('.swiper', {
     loop: false,
-    zoom: {
-        maxRatio: 3
-    },
+    zoom: { maxRatio: 3 },
     navigation: {
         nextEl: '#next',
         prevEl: '#prev'
+    },
+    on: {
+        init: function () {
+            atualizarBotao(this.activeIndex);
+        },
+        slideChange: function () {
+            atualizarBotao(this.activeIndex);
+        }
     }
 });
+
+function atualizarBotao(index){
+
+    const ocultar = [0,5,7];
+
+    botao.classList.remove('whats-left','whats-right','whats-center');
+
+    if (ocultar.includes(index)) {
+        botao.classList.remove('show');
+        return;
+    }
+
+    if (index === 1 || index === 2){
+        botao.classList.add('whats-left');
+    } 
+    else if (index === 3 || index === 4){
+        botao.classList.add('whats-right');
+    } 
+    else {
+        botao.classList.add('whats-center');
+    }
+
+    botao.classList.add('show');
+}
 </script>
 
 </body>
